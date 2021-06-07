@@ -48,8 +48,20 @@ class Dequeue {
         return result
     }
 
+    peekFront () {
+        return this.items[this.lowestCount]
+    }
+
+    peekBack () {
+        return this.items[this.count--]
+    }
+
     isEmpty () {
-        return this.count - this.lowestCount === 0
+        return this.size() === 0
+    }
+
+    size () {
+        return this.count - this.lowestCount
     }
 }
 
